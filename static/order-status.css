@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+.noDis{
+    display: none;
+}
+#alert {
+    position: fixed;
+    width: calc(100% - 20px);
+    padding: 0 30px;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+
+.container {
+    width: 700px;
+    margin: 40px auto;
+}
+
+.order-header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.order-header h1 {
+    margin: 0 0 8px;
+}
+
+.order-header p {
+    margin: 0;
+    color: #777;
+}
+
+#status-box {
+    background-color: white;
+    margin-top: 20px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#status-box h2 {
+    margin-bottom: 5px;
+}
+
+#status-box p {
+    color: #777;
+}
+
+#progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.step {
+    text-align: center;
+    width: 90px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    line-height: 30px;
+    color: #777;
+}
+
+.step.active .circle {
+    border-color: #333;
+    background-color: #333;
+    color: white;
+}
+
+.step p {
+    font-size: 12px;
+}
+
+.line {
+    width: 60px;
+    height: 2px;
+    background-color: #ccc;
+}
+
+.line.active {
+    background-color: #333;
+}
+
+#order-items {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#order-items h2 {
+    margin-top: 0;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.order-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.item-info {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.item-info h3 {
+    margin: 0 0 5px;
+}
+
+.item-info p {
+    margin: 0;
+    color: #777;
+}
+
+.item-price p {
+    font-weight: bold;
+}
+
+.total {
+    background-color: white;
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}

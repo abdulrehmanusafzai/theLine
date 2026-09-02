@@ -1,0 +1,90 @@
+html
+    head
+        title The Line
+        link(rel="stylesheet", href="/home.css")
+
+    body
+        div#alert.noDis
+            p#alertMessage The Message
+
+        .navbar
+            h2 theline.com
+
+            ul
+                li
+                a(href="/") Home
+                li
+                a(href="/orders") Your Orders
+                li
+                a(href="/cart") Cart
+
+        .container
+
+            h1 Food Menu
+
+            if fastFoodMenuItems.length > 0
+                h2 Fast Food 
+                .menu-container
+                    each menuItem in fastFoodMenuItems 
+                        if menuItem.available
+                            .card
+                                p.menu-item-id= menuItem.id
+                                img.food-image(src=menuItem.image alt="Food Image")
+
+                                .card-details
+                                    h2= menuItem.name 
+                                    p.description= menuItem.description
+                                    p.price= "PKR. " + menuItem.price
+
+                                button.addToCartBtn(data-id=menuItem.id) Add to Cart
+
+            if desiFoodMenuItems.length > 0
+                h2 Desi Food 
+                .menu-container 
+                    each menuItem in desiFoodMenuItems 
+                        if menuItem.available
+                            .card
+                                p.menu-item-id= menuItem.id
+                                img.food-image(src=menuItem.image alt="Food Image")
+
+                                .card-details
+                                    h2= menuItem.name 
+                                    p.description= menuItem.description
+                                    p.price= "PKR. " + menuItem.price
+
+                                button.addToCartBtn(data-id=menuItem.id) Add to Cart
+
+            if desertsMenuItems.length > 0
+                h2 Desserts 
+                .menu-container 
+                    each menuItem in desertsMenuItems 
+                        if menuItem.available
+                            .card
+                                p.menu-item-id= menuItem.id
+                                img.food-image(src=menuItem.image alt="Food Image")
+
+                                .card-details
+                                    h2= menuItem.name 
+                                    p.description= menuItem.description
+                                    p.price= "PKR. " + menuItem.price
+
+                                button.addToCartBtn(data-id=menuItem.id) Add to Cart
+
+            if coldDrinksMenuItems.length > 0
+                h2 Cold Drinks 
+                .menu-container 
+                    each menuItem in coldDrinksMenuItems 
+                        if menuItem.available
+                            .card
+                                p.menu-item-id= menuItem.id
+                                img.food-image(src=menuItem.image alt="Food Image")
+
+                                .card-details
+                                    h2= menuItem.name 
+                                    p.description= menuItem.description
+                                    p.price= "PKR. " + menuItem.price
+
+                                button.addToCartBtn(data-id=menuItem.id) Add to Cart
+
+        block script 
+            script(src="home.js") 

@@ -1,0 +1,75 @@
+html
+  head
+    title Admin Panel - The Line
+    link(rel="stylesheet", href="admin.css")
+
+  body
+    .container
+
+      div#alert.noDis
+        p#alertMessage 
+        
+      .navbar
+        h2 Food Admin Panel
+        ul
+          li
+            a.active(href="/admin") Dashboard
+          li
+            a(href="/admin/pending-orders") Orders
+
+      //- Main Content
+      .content
+        h1 Add New Food Item
+
+        form#addForm(enctype="multipart/form-data")
+          .form-group
+            label(for="name") Food Name
+            input#name(type="text" name="name" placeholder="Enter food name")
+
+          .form-group
+            label(for="price") Price
+            input#price(type="number" name="price" placeholder="Enter price")
+
+          .form-group
+            label(for="category") Category
+            select#category(name="category")
+              option(value="") Select category
+              option(value="Fast Food") Fast Food
+              option(value="Desi Food") Desi Food
+              option(value="Drinks") Drinks
+              option(value="Dessert") Dessert
+
+          .form-group
+            label(for="description") Description
+            textarea#description(name="description" rows="4" placeholder="Write a short description")
+
+          .form-group
+            label(for="image") Food Image
+            input#image(type="file" name="image" accept="image/*")
+
+          .form-group.checkbox-group
+            label
+              input#available(type="checkbox" name="available" checked)
+              | Available for ordering
+
+          .form-buttons
+            button#addBtn(type="submit") Add Food
+            button(type="reset") Clear
+
+        //- Food Items Preview
+        h1 Current Food Items
+
+        table#menu-table.preview-table
+          thead
+            tr
+              th Name
+              th Category
+              th Price
+              th Availability 
+          tbody#menu-rows
+
+      //- Footer
+      footer
+        p © 2026 - The Line
+    block script 
+      script(src="admin.js") 

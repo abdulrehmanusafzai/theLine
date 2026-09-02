@@ -1,0 +1,75 @@
+html
+  head
+    title Your Cart - The Line
+    link(rel="stylesheet", href="cart.css")
+
+body
+  div#alert.noDis
+    p#alertMessage 
+
+  #address-modal.address-modal
+      .modal-content
+          h2 Delivery Address
+
+          p Please enter your delivery address.
+
+          textarea#address-input(
+              placeholder="Enter your complete delivery address"
+              rows="4"
+          )
+
+          .modal-buttons
+              button#cancel-address Cancel
+              button#confirm-address Confirm Order
+
+  #phoneModal.modal
+    .modalContent
+        h2 Enter Your Phone Number
+        p Please enter your phone number to continue with your order.
+        input#phoneNumber(type="tel" placeholder="03XXXXXXXXX")
+
+        button#continueOrderBtn Continue
+        button#closeModalBtn Cancel
+
+  .navbar
+    h2 theline.com
+
+    ul
+      li
+        a(href="/") Home
+      li
+        a(href="/orders") Order Status
+      li
+        a(href="/cart") Cart
+
+  .container
+    h1 Your Cart
+
+    .cart-container
+
+      .cart-items
+        h2 Cart Items 
+         
+
+      //- Order Summary
+      .order-summary
+        h2 Order Summary
+
+        .summary-row
+          p Subtotal
+          p#sub-total
+
+        .summary-row
+          p Delivery Charges
+          p#delivery-charges
+
+        hr
+
+        .summary-row.total
+          h3 Total
+          h3#total
+
+        button#checkout-btn Log In
+
+  block script 
+    script(src="cart.js") 

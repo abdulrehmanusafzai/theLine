@@ -1,0 +1,108 @@
+body {
+    font-family: Arial;
+    background-color: lightgray;
+    margin: 0;
+}
+.noDis{
+    display: none;
+}
+#alert {
+    position: fixed;
+    width: calc(100% - 385px);
+    padding: 0 30px;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.success {
+    background-color: #d4edda;
+    color: green;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: red;
+}
+.container {
+    width: 900px;
+    margin: auto;
+    background-color: white;
+}
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+.navbar h2 {
+    margin: 0;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+.navbar ul li {
+    display: inline;
+    margin-right: 15px;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+.navbar ul li a.active {
+    color: yellow;
+}
+.content {
+    padding: 20px;
+}
+h1 {
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+form {
+    padding: 15px;
+    border: 1px solid gray;
+    background-color: #eee;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 7px;
+}
+.checkbox-group input {
+    width: auto;
+}
+.checkbox-group label {
+    display: inline;
+}
+.form-buttons button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.preview-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.preview-table th,
+.preview-table td {
+    border: 1px solid gray;
+    padding: 8px;
+}
+.preview-table th {
+    background-color: #ddd;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

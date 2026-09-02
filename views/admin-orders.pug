@@ -1,0 +1,53 @@
+html
+    head
+        title Pending Orders - The Line
+        link(rel="stylesheet", href="/admin-orders.css")
+
+    body
+
+        .container
+
+            .navbar
+                h2 Food Admin Panel
+                ul
+                    li
+                        a(href="/admin") Dashboard
+                    li
+                        a.active(href="/admin/pending-orders") Orders
+
+            h1 Pending Orders
+
+            .orders
+                if allOrders.length > 0
+                    each order in allOrders
+                        .order
+                            .order-header
+                                h3= "Order # " + order.id
+                                span.pending= order.status
+
+                            .customer-info
+                                //- p
+                                //-     strong Customer:
+                                //-     |  Abdul Rehman
+
+                                p
+                                    strong Phone:
+                                    |  #{order.phone}
+
+                                p
+                                    strong Address:
+                                    |  #{order.address}
+                            .order-items
+                                    h4 Items
+                                    if order.item_ids.length > 0
+                                        each item in order.item_ids 
+                                            .item
+                                                span= item.name
+                                                span= "Rs. " + parseInt(item.price) 
+
+                            .order-total
+                                strong Total:
+                                strong= "Rs. " + parseInt(order.total_amount)
+
+    block script 
+        script(src="/admin-orders.js") 

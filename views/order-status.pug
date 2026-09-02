@@ -1,0 +1,40 @@
+html
+  head
+    title Order Status
+    link(rel="stylesheet", href="order-status.css")
+
+  body
+    div#alert.noDis
+      p#alertMessage 
+
+    .navbar
+      h2 theline.com
+
+      ul
+          li
+          a(href="/") Home
+          li
+          a(href="/orders") Your Orders
+          li
+          a(href="/cart") Cart
+
+
+    .container
+
+      .order-header
+        h1 Order Status
+        p#order-id
+
+      #status-box
+
+      #progress
+
+      .total
+        h3 Total
+        h3#total-cont
+
+      .message
+        p Thank you for visiting theline.com!
+
+  block script 
+    script(src="order-status.js") 
