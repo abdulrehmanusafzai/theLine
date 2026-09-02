@@ -77,7 +77,6 @@ app.post('/create-order', fetchuser, [
 
     if (!errors.isEmpty()){
         errors = errors.array();
-        console.log(errors);
         const feedback = {
             status: "error",
             message: errors[0].msg

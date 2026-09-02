@@ -13,7 +13,6 @@ const fetchMenuItems = async () => {
     });
 
     const response = await menuItems.json()
-    console.log(response)
     
     fillMenuTable(response);
 }
@@ -40,7 +39,6 @@ addBtn.addEventListener("click", async (e) => {
     const description = document.getElementById("description").value
     const image = document.getElementById("image").files[0]
     const available = document.getElementById("available").checked
-    console.log(image)
 
     const formData = new FormData();
     
@@ -57,8 +55,9 @@ addBtn.addEventListener("click", async (e) => {
     });
     const result = await response.json();
     manageAlert(result);
-    fillMenuTable([{name, price, category, description, image, available}])
-    console.log(result);
+    if (result.status === "success"){
+        fillMenuTable([{name, price, category, description, image, available}])
+    }
 });
 
 // Alert Management

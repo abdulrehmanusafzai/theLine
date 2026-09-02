@@ -65,7 +65,6 @@ const fetchCartItems = async () => {
             })
         });
         const result = await response.json();
-        console.log(result);
         fillList(result);
     } else {
         list.innerHTML = `<h3>Your Cart is Empty</h3>`
@@ -76,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {fetchCartItems(), removePho
 
 const fillList = (items) => {
     items.forEach(item => {
-        // console.log(item.price)
+        
         list.innerHTML += `<div class="cart-item" id="${item.id}">
                 <img src="${item.image}" alt="Burger">
 
@@ -95,7 +94,7 @@ const fillList = (items) => {
 
 const functionalRemoveBtn = (items) => {
     const removeBtns = document.querySelectorAll(".remove-btn");
-    // console.log(items)
+    
     removeBtns.forEach(removeBtn => {
         removeBtn.addEventListener("click", () => {
             const removeBtnIdStringed = removeBtn.dataset.id;

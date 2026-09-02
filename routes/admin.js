@@ -42,7 +42,6 @@ router.post('/add-item', upload.single("image"), [
     let errors = validationResult(req);
     if (!errors.isEmpty()){
         errors = errors.array();
-        console.log(errors);
         const feedback = {
             status: "error",
             message: errors[0].msg
@@ -97,7 +96,6 @@ router.post('/register-user', [
     let errors = validationResult(req);
     if (!errors.isEmpty()){
         errors = errors.array();
-        console.log(errors)
         const feedback = {
             status: "error",
             message: errors[0].msg
@@ -157,8 +155,6 @@ router.get('/pending-orders', async (req, res) => {
         );
         
         order.item_ids = itemNames.rows
-        
-        // console.log(itemNames.rows)
     }
     
     res.status(200).render("admin-orders.pug", {allOrders});
