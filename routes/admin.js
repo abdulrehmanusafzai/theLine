@@ -6,7 +6,9 @@ const Pool = require('../db.js');
 const fetchuser = require('../middleware/fetchuser.js');
 require('dotenv').config();
 
-const JWT_SECRET = process.env.JWT_SECRET
+const JWT_SECRET = process.env.JWT_SECRET;
+const ADMIN_USERNAME = "admin";
+const ADMIN_PASSWORD = "12345678";
 
 const router = express.Router();
 
@@ -158,6 +160,25 @@ router.get('/pending-orders', async (req, res) => {
     }
     
     res.status(200).render("admin-orders.pug", {allOrders});
+});
+
+router.post('/auth-admin', async (req, res) => {
+    if (req.body.username == ADMIN_USERNAME && req.body.password == ADMIN_PASSWORD) {
+        const data = {
+            user: {
+                id: req.body.password
+            }
+        }
+
+        const adminToken = jwt.sign(data, JWT_SECRET);
+        res.json({adminToken})
+    } else {
+        const feedback = {
+            status: "error",
+            message: "Wrong password or username"
+        }
+        res.status(401).json(feedback)
+    }
 });
 
 module.exports = router;

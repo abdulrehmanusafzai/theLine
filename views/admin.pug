@@ -4,6 +4,16 @@ html
     link(rel="stylesheet", href="admin.css")
 
   body
+    #phoneModal.modal
+      .modalContent
+          h2 Enter username and password
+          p "admin" | "12345678"
+          input#username(type="text")
+          input#password(type="password")
+
+          button#continueLoginBtn Continue
+          button#closeModalBtn Cancel
+
     .container
 
       div#alert.noDis
