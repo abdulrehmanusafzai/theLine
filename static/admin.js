@@ -102,7 +102,6 @@ continueLoginBtn.addEventListener("click", async (e) => {
     const result = await response.json();
 
     
-    console.log(result)
     if (result.adminToken){
         sessionStorage.setItem("adminToken", result.adminToken);
         removePhoneModal();
