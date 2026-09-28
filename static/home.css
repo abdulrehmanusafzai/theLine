@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.noDis{
+    display: none;
+}
+#alert {
+    position: fixed;
+    width: calc(100% - 100px);
+    padding: 0 30px;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 270px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.menu-item-id{
+    display: none;
+}
+
+.food-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-details {
+    padding: 12px;
+}
+
+.card-details h2 {
+    margin-top: 0;
+}
+
+.description {
+    color: #555;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.available {
+    color: green;
+}
+
+.not-available {
+    color: red;
+}
+
+.order-btn {
+    padding: 8px 14px;
+    margin: 0 8px;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.addToCartBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    /* font-size: 15px; */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addToCartBtn:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+
+.noDis{
+    display: none;
+}
+#alert {
+    position: fixed;
+    width: calc(100% - 20px);
+    padding: 0 30px;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.address-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    width: 350px;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+#address-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 10px;
+    resize: none;
+}
+
+.modal-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#cancel-address {
+    background-color: #ddd;
+}
+
+#confirm-address {
+    background-color: green;
+    color: white;
+}
+
+.modalContent {
+    background-color: white;
+    width: 350px;
+    padding: 20px;
+    margin: 150px auto;
+    border-radius: 8px;
+}
+
+.modalContent input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: #333333;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+/* Cart Layout */
+
+.cart-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Cart Items */
+
+.cart-items {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cart-items h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 10px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h3 {
+    margin: 0 0 8px 0;
+}
+
+.item-details p {
+    margin: 5px 0;
+}
+
+.price {
+    font-weight: bold;
+}
+
+/* Quantity Buttons */
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cccccc;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.quantity span {
+    padding: 0 10px;
+}
+
+.item-total {
+    min-width: 80px;
+    font-weight: bold;
+}
+
+/* Remove Button */
+
+.remove-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.remove-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Order Summary */
+
+.order-summary {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.order-summary h2 {
+    margin-top: 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-row p {
+    margin: 10px 0;
+}
+
+.total {
+    font-size: 18px;
+}
+
+/* Checkout Button */
+
+#checkout-btn, #proceed-to-place-order {
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#checkout-btn:hover {
+    background-color: #555555;
+}
+
+/* Basic Mobile Design */
+
+@media (max-width: 700px) {
+
+    .cart-container {
+        flex-direction: column;
+    }
+
+    .cart-items,
+    .order-summary {
+        width: 100%;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar li {
+        margin-left: 10px;
+    }
+
+}

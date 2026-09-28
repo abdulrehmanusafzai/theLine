@@ -1,0 +1,59 @@
+html
+  head
+    title Order Status
+    link(rel="stylesheet", href="order-status.css")
+
+  body
+    div#alert.noDis
+      p#alertMessage 
+
+    .navbar
+      h2 theline.com
+
+      ul
+          li
+          a(href="/") Home
+          li
+          a(href="/orders") Your Orders
+          li
+          a(href="/cart") Cart
+
+
+    .container
+
+      .order-header
+        h1 Order Status
+        p#order-id
+
+      #status-box
+
+      #progress
+        #Pl.step
+            #placing-circle.circle 
+            p Order Placing
+
+        #l1.line
+
+        #Pr.step
+            #prep-circle.circle 
+            p Preparation
+
+        #l2.line
+
+        #Del.step
+            #delivery-circle.circle
+            p Delivery
+
+
+      #order-items 
+        h2 Your Order
+
+      .total
+        h3 Total
+        h3#total-cont
+
+      .message
+        p Thank you for visiting theline.com!
+
+  block script 
+    script(src="order-status.js") 
