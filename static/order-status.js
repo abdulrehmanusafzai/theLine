@@ -13,7 +13,7 @@ const fetchOrderStatus = async () => {
     if (result.feedback.status == "success") {
         renderOrderStatus(result.orderData)
     } else {
-        statusBoxCont.innerHTML = `<h3>You have no Pending Order</h3>`
+        statusBoxCont.innerHTML = `<h3>You have no Pending Orders</h3>`
     }
 };
 
